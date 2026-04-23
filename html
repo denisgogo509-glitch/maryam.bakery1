@@ -1,0 +1,204 @@
+!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam's Bakery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E0F7FA; /* Hellblau */
+            color: #37474F; /* Dunkelblau für Text */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFAB91; /* Hellorange */
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #FFFFFF;
+        }
+        nav {
+            background-color: #FF7043; /* Orange */
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: linear-gradient(to right, #FFAB91, #FF7043);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background-color: #FFFFFF;
+            border: 1px solid #B0BEC5;
+            border-radius: 12px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            color: #37474F;
+        }
+        .product .description {
+            font-size: 0.9em;
+            color: #78909C;
+            margin: 5px 0 10px 0;
+        }
+        .product p {
+            margin: 5px 0;
+            color: #607D8B;
+            font-weight: bold;
+        }
+        button {
+            background-color: #FF7043;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        button:hover {
+            background-color: #F4511E;
+        }
+        footer {
+            background-color: #FFAB91;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product {
+                width: 90%;
+            }
+        }
+        @media (min-width: 769px) {
+            .products {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                justify-items: center;
+            }
+            .product {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maryam's Bakery</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#products">Produkte</a></li>
+            <li><a href="#about">Über uns</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <h2>Willkommen bei Maryam's Bakery</h2>
+        <p>Frische, hausgemachte Leckereien für jeden Geschmack!</p>
+    </section>
+    <section id="products" class="products">
+        <div class="product">
+            <img src="https://source.unsplash.com/random/300x200/?strawberry cookies" alt="Strawberry White Chocolate Cheesecake Cookies">
+            <h3>Strawberry White Chocolate Cheesecake Cookies</h3>
+            <p class="description">Creamy cheesecake filling with fresh strawberries and white chocolate chunks.</p>
+            <p>Preis: 3.00 €</p>
+        </div>
+        <div class="product">
+            <img src="https://source.unsplash.com/random/300x200/?smores cookies" alt="S'mores Cookies">
+            <h3>S'mores Cookies</h3>
+            <p class="description">Graham cracker base with marshmallow and chocolate – campfire in a cookie!</p>
+            <p>Preis: 2.80 €</p>
+        </div>
+        <div class="product">
+            <img src="https://source.unsplash.com/random/300x200/?cinnamon rolls" alt="Cinnamon Rolls">
+            <h3>Cinnamon Rolls</h3>
+            <p class="description">Soft, fluffy rolls swirled with cinnamon and topped with creamy icing.</p>
+            <p>Preis: 4.00 €</p>
+        </div>
+        <div class="product">
+            <img src="https://source.unsplash.com/random/300x200/?biscoff cookies" alt="Biscoff Lotus Cookies">
+            <h3>Biscoff Lotus Cookies</h3>
+            <p class="description">Crunchy Biscoff biscuits with smooth Lotus spread – a caramel dream.</p>
+            <p>Preis: 3.20 €</p>
+        </div>
+        <div class="product">
+            <img src="https://source.unsplash.com/random/300x200/?pistachio cookies" alt="Pistachio Cookies">
+            <h3>Pistachio Cookies</h3>
+            <p class="description">Nutty pistachio flavor with a soft, chewy texture.</p>
+            <p>Preis: 2.90 €</p>
+        </div>
+        <div class="product">
+            <img src="https://source.unsplash.com/random/300x200/?chocolate brownies" alt="Loaded Fudgy Brownies">
+            <h3>Loaded Fudgy Brownies</h3>
+            <p class="description">Rich, fudgy chocolate brownies loaded with extras for ultimate indulgence.</p>
+            <p>Preis: 3.50 €</p>
+        </div>
+        <div class="product">
+            <img src="https://source.unsplash.com/random/300x200/?chocolate chip cookies" alt="Soft & Chewy Chocolate Chip Cookies">
+            <h3>Soft & Chewy Chocolate Chip Cookies</h3>
+            <p class="description">Classic chocolate chip cookies that are soft, chewy, and full of chocolate.</p>
+            <p>Preis: 2.70 €</p>
+        </div>
+    </section>
+    <footer>
+        <button onclick="window.open('https://www.instagram.com/maryam.bakery1', '_blank')">Folge uns auf Instagram: maryam.bakery1</button>
+    </footer>
+</body>
+</html>
